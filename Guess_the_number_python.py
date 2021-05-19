@@ -1,3 +1,6 @@
+# Viteac 
+# https://www.viteac.blogspot.com
+
 import random
 from time import sleep
 
