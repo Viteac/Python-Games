@@ -5,7 +5,6 @@ guess_limit = 3
 
 def game():
     secret_number = random.randint(1, 9)
-    print(secret_number)
     guess_count = 0
     while guess_count < guess_limit:
         try:
