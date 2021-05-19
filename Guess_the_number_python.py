@@ -1,14 +1,21 @@
 import random
+from time import sleep
 
-guess_limit = 3
+guess_limit = 4
 
 
 def game():
+    x = [random.randint(1, 10) for x in range(1, 40)]
+
+    for val in x:
+        print(val, end=' ', flush=True)
+        sleep(0.1)
     secret_number = random.randint(1, 9)
-    guess_count = 0
+    guess_count = 1
     while guess_count < guess_limit:
         try:
-            print('guess the number')
+            print(f'\nCount: {guess_count}')
+            print('Guess the number')
             guess = int(input('>'))
         except ValueError:
             pass
@@ -21,8 +28,7 @@ def game():
                 if ask == 'Y':
                     return game()
     else:
-        print(f'you had your limits the secret number was {secret_number}')
-
+        print(f'You had your limits mate, the secret number was {secret_number}')
     ask = input('Want to play again? Y/N').upper()
     if ask == 'Y':
         return game()
