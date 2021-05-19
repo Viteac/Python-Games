@@ -67,7 +67,6 @@ def game(pi):
 
         print()
         print()
-        print(word)
         print(f'Points: Total {s} This round: {p}')
         print('Category:', kind.capitalize(), 'Vowels:', vow, 'Consonants:', co, 'Your Guesses:', ''.join(displi))
 
