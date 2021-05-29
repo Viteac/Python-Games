@@ -13,12 +13,12 @@ def game():
     for val in x:
         print(val, end=' ', flush=True)
         sleep(0.1)
-    secret_number = random.randint(1, 9) # Mystery Random Number
+    secret_number = random.randint(1, 11) # Mystery Random Number
     guess_count = 1
     while guess_count < guess_limit:  # Ask for number till the guess counter is lower than guess limit
         try:
             print(f'\nCount: {guess_count}') 
-            print('Guess the number')
+            print('Guess the number between 1 - 10')
             guess = int(input('>'))
         except ValueError:    # Pass if player enters no digit
             pass
