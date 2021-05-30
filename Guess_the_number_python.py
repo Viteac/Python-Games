@@ -1,6 +1,3 @@
-# Viteac 
-# https://www.viteac.blogspot.com
-
 import random
 from time import sleep
 
@@ -9,7 +6,7 @@ guess_limit = 4  # Set the guesses limit
 
 def game():
 
-    def ask():
+    def ask():  # Ask user if want to play again till he answers 'y','n'
         while True:
             again = input('Wanna play again Y/N?\n> ').lower()
             if again in 'yn':
@@ -22,6 +19,7 @@ def game():
     for val in x:
         print(val, end=' ', flush=True) # Flush intro x
         sleep(0.1)
+        
     secret_number = random.randint(1, 11) # Mystery Random Number
     guess_count = 1
     while guess_count < guess_limit:  # Ask for number till the guess counter is lower than guess limit
